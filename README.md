@@ -41,7 +41,7 @@ You can run the application locally using:
 node app.js
 ```
 
-The server will start on port 6000, and you can access it at `http://localhost:6000`.
+The server will start on port 3000, and you can access it at `http://localhost:3000`.
 
 ### Docker
 
@@ -60,6 +60,23 @@ To build and run the application using Docker, follow these steps:
    ```
 
 The application will be accessible at `http://localhost:3000`.
+
+### Running with Nginx Reverse Proxy (Docker Compose)
+
+To run the application with Nginx as a reverse proxy using Docker Compose:
+
+1. Make sure you have `docker-compose.yaml` and `nginx.conf` in your project directory.
+2. Start the services:
+
+   ```powershell
+   docker compose up
+   ```
+
+3. Access the application via Nginx at:
+
+   [http://localhost/](http://localhost/)
+
+Nginx will listen on port 80 and forward requests to the Node.js app running on port 3000.
 
 ## License
 
