@@ -41,7 +41,39 @@ You can run the application locally using:
 node app.js
 ```
 
-The server will start on port 3000, and you can access it at `http://localhost:3000`.
+The server will start on port 3000, and you can access it at `http://localhost:3version: '3'
+services:
+  app:
+    build: .
+    container_name: express-app
+    # Remove or comment out the ports section below!
+    # ports:
+    #   - "3000:3000"
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app      version: '3'
+      services:
+        app:
+          build: .
+          container_name: express-app
+          # Remove or comment out the ports section below!
+          # ports:
+          #   - "3000:3000"
+        nginx:
+          image: nginx:latest
+          container_name: nginx-proxy
+          ports:
+            - "80:80"
+          volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
+          depends_on:
+            - app000`.
 
 ### Docker
 
