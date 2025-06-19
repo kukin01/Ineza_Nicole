@@ -56,10 +56,10 @@ To build and run the application using Docker, follow these steps:
 2. Run the Docker container:
 
    ```
-   docker run -p 6000:6000 my-express-app
+   docker run -p 3000:3000 my-express-app
    ```
 
-The application will be accessible at `http://localhost:6000`.
+The application will be accessible at `http://localhost:3000`.
 
 ## License
 

@@ -4,7 +4,7 @@ services:
   app:
     build: .
     ports:
-      - "6000:6000"
+      - "3000:3000"
   nginx:
     image: nginx:latest
     ports:
